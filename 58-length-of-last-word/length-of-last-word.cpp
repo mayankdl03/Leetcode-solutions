@@ -3,9 +3,10 @@ public:
     int lengthOfLastWord(string s) {
         stringstream ss(s);
         string word;
+        vector<string> v;
         while(ss>>word){
+            v.push_back(word);
         }
-        return word.size();
-
+        return v[v.size()-1].size();
     }
 };
